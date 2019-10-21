@@ -241,6 +241,7 @@ strong{
 /*PRODUCTO*/
 #products{
     width: 80%;
+    margin: auto;
     display:flex;
     flex-flow: row wrap; 
     justify-content:center; 
@@ -403,15 +404,17 @@ strong{
 #nuestraMision p, #nuestraVision p{font-size: .9em;}
 
 /*____________________PRODUCTO___________________*/
-#procedimientoMiel figure{width:65%; margin: auto;}
+#procedimientoMiel figure{width:40%; margin-left: 2%}
 #procedimientoMiel img{width:100%}
-#products h2, #procedimientoMiel h2, #preguntasFrecuentes h2, .noticiasRelevantes h2, .categoriasNovedades h2{
+#products h2, #procedimientoMiel h2, 
+#cuidadoAbejas h2, #preguntasFrecuentes h2, .noticiasRelevantes h2, .categoriasNovedades h2{
     width: 80%; 
     margin: auto;
     margin-top: 3%;
     margin-bottom: 7%;
     text-transform: uppercase;
     text-align: center;
+    font-size: 1.8em;
     font-weight: 700;
     color: #69A05F;
     font-family: 'Whitney';}
@@ -453,6 +456,29 @@ strong{
     -webkit-align-items: center;
     align-items: center;
 }
+#products{margin-bottom: 10%;}
+
+.productosgenerales{width: 200px;
+    margin: 0% 3%; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+.productosgenerales h3{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+.productosgenerales p{font-size: 1.1em;}
+.productosgenerales figure{
+    width: 100%;
+}
+.productosgenerales img{
+   width: 100%;
+}
+
+#cuidadoAbejas p{font-size: 1em}
+
 
 /*_______________________NOVEDADES_____________*/
 .noticiasRelevantes{

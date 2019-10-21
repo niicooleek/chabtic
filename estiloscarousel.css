@@ -1,0 +1,29 @@
+
+
+
+
+.slick-arrow {
+  display: none !important; /* `arrows: false;` is not enough to prevent horizontal scrolling */
+}
+.slick-slide {
+  width: 100%;
+  background: #c69;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  outline: none; /* revent the appearance of a tiny gray contour */
+  padding: 18px 0;
+  text-align: center;
+}
+
+.slider-products img{
+  width: 100%;
+}
+.slider-nav {
+  margin-bottom: 12px;
+}
+.slider-nav .slick-current,
+.slider-nav .slick-slide:hover {
+  cursor: pointer;
+  opacity: .7;
+}
