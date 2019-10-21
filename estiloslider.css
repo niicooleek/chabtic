@@ -84,7 +84,7 @@
 .slider {
   margin: auto;
   transform: translate(0%, 0%);
-  width: 70%;
+  width: 300px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,7 +100,7 @@
   display: flex;
   position: relative;
   top: 0;
-  left: -400px;
+  left: -300px;
   width: 10000px;
 }
 
@@ -109,22 +109,19 @@
 }
 
 .slide {
-  width: 500px;
+  width: 300px;
   height: 300px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   transition: all 1s;
   position: relative;
-  background: #FFCF47;
   border-radius: 2px;
 }
 
-.slider.loaded .slide:nth-child(2),
-.slider.loaded .slide:nth-child(7) {
-  background: #FFCF47;
-}
+
 .slider.loaded .slide:nth-child(1),
 .slider.loaded .slide:nth-child(6) {
   background: #7ADCEF;
@@ -172,4 +169,12 @@
 .prev:active,
 .next:active {
   transform: scale(0.8);
+}
+
+@media screen and (min-width: 640px){
+.slides{left:-500px}
+.slider{width: 500px;}
+.slide{width: 500px; height:400px;}
+.wrapper{height: 400px;}
+#procedimientoMiel figure{width:57%; margin: auto;}
 }

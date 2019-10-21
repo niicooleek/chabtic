@@ -404,8 +404,7 @@ strong{
 #nuestraMision p, #nuestraVision p{font-size: .9em;}
 
 /*____________________PRODUCTO___________________*/
-#procedimientoMiel figure{width:40%; margin-left: 2%}
-#procedimientoMiel img{width:100%}
+
 #products h2, #procedimientoMiel h2, 
 #cuidadoAbejas h2, #preguntasFrecuentes h2, .noticiasRelevantes h2, .categoriasNovedades h2{
     width: 80%; 
@@ -424,38 +423,6 @@ strong{
     margin-top: 12%;
 }
 
-.swiper-container {
-    width: 80%;
-    height:400px;
-}
-.swiper-wrapper{
-  padding-left:0%;
-  margin: auto;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  margin:10%;
-  
-    width: 70%;
-  height : 80%;
-    border-right: 1px solid black;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
 #products{margin-bottom: 10%;}
 
 .productosgenerales{width: 200px;
@@ -470,12 +437,11 @@ strong{
     
 }
 .productosgenerales p{font-size: 1.1em;}
-.productosgenerales figure{
-    width: 100%;
-}
-.productosgenerales img{
-   width: 100%;
-}
+.productosgenerales figure{width: 100%;}
+.productosgenerales img{width: 100%;}
+#procedimientoMiel figure{width:68%; margin: auto;}
+#procedimientoMiel img{width:100%}
+.slide p{font-size: 1.2em;}
 
 #cuidadoAbejas p{font-size: 1em}
 
@@ -855,6 +821,7 @@ body{font-size: 1.4em;}
     .boton a {font-size: 1em;}
     #products{width:100%}
 
+    .productosgenerales{width:245px}
     #Historia {
         background: url(images/linea.png) center 48%/ 82% no-repeat;
     }
