@@ -1,0 +1,865 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap');
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Medium.eot');
+    src: url('fonts/Whitney-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Whitney-Medium.woff2') format('woff2'),
+        url('fonts/Whitney-Medium.woff') format('woff'),
+        url('fonts/Whitney-Medium.ttf') format('truetype'),
+        url('fonts/Whitney-Medium.svg#Whitney-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-MediumItalic.eot');
+    src: url('fonts/Whitney-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Whitney-MediumItalic.woff2') format('woff2'),
+        url('fonts/Whitney-MediumItalic.woff') format('woff'),
+        url('fonts/Whitney-MediumItalic.ttf') format('truetype'),
+        url('fonts/Whitney-MediumItalic.svg#Whitney-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Bold.eot');
+    src: url('fonts/Whitney-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Whitney-Bold.woff2') format('woff2'),
+        url('fonts/Whitney-Bold.woff') format('woff'),
+        url('fonts/Whitney-Bold.ttf') format('truetype'),
+        url('fonts/Whitney-Bold.svg#Whitney-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+article, aside, footer, header, nav, section, figure{
+    display: block;
+     }
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+
+
+body{font-family: "PT Sans"; font-size: 62.5%; background: url(images/textura_fondo.png) 0% 0% /auto repeat; font-size: 1.0em;}
+#body{min-width: 320px;max-width: 1960px;}
+
+#inicio{  
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+
+}
+
+#inicio>div { 
+    height: 100%;  
+}
+#inicio>div img{
+  height: 100%;
+}
+
+#puntos{display:none;}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+h1{
+    width: 100%;
+    height:100%;
+    grid-area: h1;
+    position: absolute;
+    text-indent: -99999.999px;
+    z-index: 99;
+    background: url(images/logo_chabtic_negro.png) center center /40% no-repeat;   
+}
+
+.barraMenu{
+    overflow: hidden;
+    width: 100%;
+    padding: 3% 0%;
+    background: url(images/logo_chabtic_blanco.png) 2% center/77px no-repeat black;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    padding: 0%;
+  }
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.menu{
+    width: 100%; 
+    padding: 0%;
+    display: grid;
+    grid-template-columns: 80% auto ;
+    grid-template-rows: auto;
+    grid-gap: 1px;
+    grid-template-areas: ". ham";
+}
+
+.logochabtic>h2{display: none;}
+
+/*MENU ÍCONO_________________________________-*/
+.ham{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#hamMenu{ grid-area: ham;}
+.hamRotate.active {transform: rotate(45deg);}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:white;
+    stroke-width:5.5;
+  }
+.ham7 .top {stroke-dasharray: 40 82;}
+.ham7 .middle {stroke-dasharray: 40 111;}
+.ham7 .bottom {stroke-dasharray: 40 161;}
+.ham7.active .top {stroke-dasharray: 17 82; stroke-dashoffset: -62px;}
+.ham7.active .middle {stroke-dashoffset: 23px;}
+.ham7.active .bottom {stroke-dashoffset: -83px;}
+
+.inactive{ display: none; -webkit-transition: ease-in 10s; /* For Safari 3.1 to 6.0 */
+    transition: display 10s;}
+
+/* MOVIL MENU_________________________*/
+.movilMenu {
+    width: 100%;
+    height: 100vh;
+    margin-top: 0%;
+    background: black;
+    font-size: 1.em;
+    display: block;
+    /* left: 10vw; */
+    /* top: 15%; */
+    z-index: 99;
+}
+
+.movilMenu li{  
+    margin: 15% 2%;
+    list-style: none;
+}
+
+.movilMenu a{
+    margin: 5%;
+    padding: 2% 0% 2% 4%;
+    color: white;
+    font-family: 'Whitney';
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.paginaActual{
+    color: #F4C643;
+    border-left:4px solid rgb(206, 161, 37);
+}
+
+.menuDesktop{
+    display: none;
+}
+
+/*PARRAFO__________________________*/
+
+.parrafoInicio{
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.parrafoInicio>h2{
+    margin: 1%;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #69A05F;
+    font-family: 'Whitney';
+
+}
+
+.parrafoInicio>p{
+    font-size: 1.4em;
+    margin-top: 4%;
+    margin-bottom: 10%;
+    text-align: justify;
+    text-align-last: center;
+
+}
+
+strong{
+    color:#79614A;
+}
+
+.boton{
+    width: 128px;
+    margin: auto;
+    padding: 11px 46px 10px 0px;
+    font-family: 'Whitney';
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: url(images/logo_boton.png)100% 100%/40% no-repeat #F4C643;
+}
+
+.boton a{
+    font-size: 1.1em;
+    margin-left: 10%;
+    color:white;
+    text-decoration: none;
+}
+
+/*INICIO____________________________*/
+
+/*PRODUCTO*/
+#products{
+    width: 80%;
+    display:flex;
+    flex-flow: row wrap; 
+    justify-content:center; 
+    align-content: center;
+}
+#products h2{width: 100%;}
+.producto{
+  justify-content: center;
+  align-items: center;
+
+    text-align: center;
+}
+.producto h3{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+.producto p{font-size: 1.1em;}
+.producto figure{ width: 100%;}
+.producto figure img{width: 100%}
+
+.mapa>img{ width: 100%;}
+
+
+/*CERTIFICADOS*/
+.certificados{
+    display:flex;
+    flex-flow: row wrap; 
+    justify-content:center; 
+    align-content: center;
+}
+.certificados article{
+ width: 180px;
+ margin: 1%;
+}
+.certificados article h3{display: none;}
+.certificados figure{width: 100%;}
+.certificados article img{
+    width: 150px;
+    height: auto;
+}
+
+/*___________________________NOSOTROS__________________________*/
+.breadcrumb h2{display: none;}
+.breadcrumb p{margin: 2%; margin-left: 5%;}
+.breadcrumb a{color: black; text-decoration: none;}
+
+
+#Historia{
+    width: 83%; margin: auto; position: relative;text-align: center; background: url(images/linea.png) center 36%/ 100% no-repeat;
+}
+#Historia>h2{font-size: 1.7em;}
+
+.flechaizq{position: absolute;top: 27%;
+    left: -1%;}
+.flechader{position: absolute; top: 27%; left: 85%;}
+#swiper>p{
+    margin-top: 14%;
+    font-size: 1.4em;
+    font-weight: 700;
+
+
+}
+#swiper article h3{
+    text-transform: uppercase;
+    margin-bottom: 1%;
+}
+#swiper article p{
+    width: 80%;
+    margin: auto;
+}
+
+
+.significadoChabtic{margin: auto; padding: 8%; text-align:center; background: url(images/fondo_significado_chabtic.jpg) 0% 0%/ 100% no-repeat rgba(137, 107, 79, 0.616);}
+.significadoChabtic h2{color: white;}
+.significadoChabtic p{color: white; font-style: italic;}
+
+ #Colaboradores h3{display:none;}
+#Colaboradores figure img{ width: 90%;}
+
+#FamiliaChabtic{width: 80%; font-size: .8em;}
+.trabajadores{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content:center; 
+    align-content: center;
+}
+.trabajador{
+    margin: 0% 5%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 0%;
+    grid-template-areas:  "figure" "h3" "p";
+}
+.trabajador>h3{grid-area: h3;}
+.trabajador>figure{ grid-area: figure;}
+.trabajador>p{ grid-area: p;}
+/*_________________PORSI_________*/
+#nuestroTrabajo{width: 95%}
+#nuestroTrabajo{font-size: .8em;}
+.imagenChabtic img{vertical-align: middle;}
+.galeriaChabtic {position: relative;}
+.imagenChabtic{display: none;}
+/*#nuestroTrabajo .prev,
+#nuestroTrabajo .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 33px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#nuestroTrabajo .next {
+    right: -85%;
+    border-radius: 32px 0 0 9px;
+}
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column {
+    float: left;
+    width: 33.3%;
+  }
+  .demo {
+    opacity: 0.6;
+  }
+
+.activeImagen,
+.demo:hover {
+  opacity: 1;
+}*/
+
+#nuestraMision, #nuestraVision{width: 80%;}
+#nuestraMision h2, #nuestraVision h2, #Colaboradores h2{font-size:1.7em;}
+#nuestraMision p, #nuestraVision p{font-size: .9em;}
+
+/*____________________PRODUCTO___________________*/
+#procedimientoMiel figure{width:65%; margin: auto;}
+#procedimientoMiel img{width:100%}
+#products h2, #procedimientoMiel h2, #preguntasFrecuentes h2, .noticiasRelevantes h2, .categoriasNovedades h2{
+    width: 80%; 
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    color: #69A05F;
+    font-family: 'Whitney';}
+
+    #preguntasFrecuentes h2{
+    width: 90%;
+    margin-top: 12%;
+}
+
+.swiper-container {
+    width: 80%;
+    height:400px;
+}
+.swiper-wrapper{
+  padding-left:0%;
+  margin: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  margin:10%;
+  
+    width: 70%;
+  height : 80%;
+    border-right: 1px solid black;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/*_______________________NOVEDADES_____________*/
+.noticiasRelevantes{
+    width: 93%;
+    margin:auto;
+    position: relative;
+}
+
+.noticiasRelevantes h2{
+    width: 100%;
+    padding: 0%;
+    margin:auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.noticiasRelevantes figure{
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    
+}
+
+.noticiasRelevantes img{
+    width: 100%;
+}
+ 
+.noticiaRelevante{
+    width:100%;
+    position: absolute;
+    padding: 1%;
+    padding-left: 2%;
+    top:90%;
+    background: #896B4F;
+    font-size: 1em;
+}
+
+.noticiaRelevante h3{
+    margin: 0%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.noticiaRelevante p{
+    margin: 0%;
+    color: white;
+    font-style: italic;
+}
+.categoriasNovedades{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content:center; 
+    align-content: center;
+
+}
+.categoriasNovedades h2{
+    margin-top: 13%;
+    margin-bottom:5%;
+}
+
+.categoria{
+    width: 50%;
+    margin: 2%;
+    position: relative;
+}
+.categoria figure{
+    width: 100%;
+}
+
+.categoria img{
+    width: 100%;
+}
+
+.categoria h3{
+    width: 100%;
+    position: absolute;
+    padding-top: 45%;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    height: 97%;
+    background: #79614a8a;
+
+}
+/*____________________CONTACTO_____________*/
+/*FORMULARIO*/
+.formulario>h2{ width: 90%; 
+    margin:auto;
+    margin-top: 4%;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #69A05F;
+    font-family: 'Whitney';}
+form{width: 85%;margin:auto;padding: 2%; font-family: 'PT Sans';}
+fieldset{margin-bottom:  3%; border: none;}
+legend{display: none;}
+.panel p, form p{margin-top: 2%;margin-bottom: 15px;}
+label{margin-bottom: 2%;}
+input{width: 100%;margin-top: 1%;padding: 1% 0px;color: #757575;font-size: 12px; background: transparent; border: 0px; border-bottom: 3px solid black;}
+select{padding: 1% 2%;color: white;background-color: #85a7bc;border:none;}
+textarea{width: 100%; margin: 0%;padding-top: 2%;border: none;vertical-align: middle;background: transparent; border-bottom: 3px solid black;}
+input[type="submit"]{margin-left:20%;color: white; border: none;}
+input[type="submit"]:hover{background-color:rgb(206, 161, 37); }
+
+    /*Acordeon*/
+    .accordion {
+        background: 0;
+        cursor: pointer;
+        width: 100%;
+        padding: 4% 20% 4% 3%;
+        position: relative;
+        border: none;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        outline: none;
+        transition: 0.4s;
+      }
+
+      .fa-angle-up{
+        font-weight: 900;
+        font-size: 2em;
+        position: absolute;
+        top: 19%;
+        left: 90%;
+      }
+      .fa-angle-down{
+        font-weight: 900;
+        font-size: 2em;
+        position: absolute;
+        top: 19%;
+        left: 90%;
+      }
+      
+      .activo, .accordion:hover {
+        background-color: #ccc; 
+      }
+      
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+
+
+
+
+
+/*FOOTER____________________________*/
+
+footer{
+    margin-top: 5%;
+    padding-top: 38%;
+    padding-bottom: 30%;
+    font-size: 1.3em;
+    display: grid;
+    grid-template-columns: auto 40% 40% auto ;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 5% 0%;
+    grid-template-areas: ". . . ." 
+    ". insta face ."
+    ". datosContacto datosContacto ."
+    ". copyright copyright ."
+    ". address address .";
+    justify-items: center;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+    background: url(images/logo_chabtic_blanco.png) center 5%/ 120px no-repeat black;
+    color: white;
+}
+
+.instagram{
+    padding: 15%;
+    padding-bottom: 20%;
+    grid-area: insta;
+    text-indent: -9999.999px;
+    background: url(images/instagram_logo.png) 100% center/ 29% no-repeat ;
+}
+
+.facebook{
+    padding: 15%;
+    padding-bottom: 20%;
+    grid-area: face;
+    text-indent: -99999.999px;
+    background: url(images/facebook_logo.png) 10% center/ 29% no-repeat ;
+
+}
+
+footer figure{
+    width: 20%;
+    margin: 5% 0%;
+}
+
+.datosContacto{
+    grid-area: datosContacto;
+}
+
+.datosContacto>p{
+    margin: 1%;
+}
+
+.copyright{
+    grid-area: copyright;
+}
+
+address{    
+    width: 70%;
+    grid-area: address;
+}
+footer p{  
+   width: 100%;
+}
+
+@media screen and (min-width: 520px){
+.boton{ width: 170px;}
+/*_HISTORIA_*/
+#Historia{background: url(images/linea.png) center 48%/ 100% no-repeat;}
+.flechader{top: 38%;left: 89%;}
+.flechaizq{top: 38%; left: 0%;}
+#swiper>p{padding-top: 5%;}
+#FamiliaChabtic p{margin-bottom:4%;}
+#Colaboradores figure img { width: 70%;}
+
+/*__NOVEDADES__*/
+.categoria{width: 35%;}
+.categoriasNovedades h2{margin-top: 10%; margin-bottom: 5%;}
+
+/*Contacto*/
+form{width: 75%;}
+input[type="submit"] {
+    margin-left: 28%;
+}
+footer{ padding-top: 20%; padding-bottom: 10%;}
+.instagram{  background: url(images/instagram_logo.png) 90% 70%/ 25% no-repeat ;}
+.facebook{background: url(images/facebook_logo.png) 10% 70%/ 25% no-repeat ;}
+
+}
+
+@media screen and (min-width: 640px){
+body{font-size: 1.1em;}
+h1{ background: url(images/logo_chabtic_negro.png) center center /30% no-repeat;}
+.menu{grid-template-columns: 85% auto ;}
+.parrafoInicio{width:66%; margin-top: 0%;}
+.parrafoInicio>p{ margin-bottom: 3%;}
+.certificados figure{height: 230px;}
+
+.categoria{width: 28%;}
+
+.flechader{top: 40%;left: 91%;}
+.flechaizq{top: 40%; left: 0%;}
+#swiper>p{padding-top: 0%;
+}
+
+footer{padding-top: 20%; padding-bottom: 10%}
+.instagram{background: url(images/instagram_logo.png) 90% center/ 20% no-repeat ;}
+.facebook{background: url(images/facebook_logo.png) 10% center/ 20% no-repeat ;}
+
+}
+
+@media screen and (min-width: 768px){
+body{font-size: 1.4em;}
+.parrafoInicio{ width: 85%; padding-top: 8%;}
+    .menu{
+        width: 100%; 
+        padding: 2% 0%;
+        display: grid;
+        grid-template-columns: 25% auto ;
+        grid-template-rows: auto;
+        grid-gap: 1px;
+        grid-template-areas: " . ul";
+    }
+
+#hamMenu{ display: none;}
+    .menuDesktop{
+        grid-area: ul;
+        display: block;
+        padding-top: 1%;
+        font-size: 20px;
+    }
+    
+    #listaDesktop{
+        width: 100%; 
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-gap: 1px; 
+        grid-template-areas: "li1 li2 li3 li4"; 
+        justify-items: center;
+        align-items: end;
+        list-style: none;
+        text-align: center;
+    }
+
+    #listaDesktop>li{
+         padding: 1% 12%;
+         border-right: .25px solid white;
+        }
+    
+        #listaDesktop>li:nth-child(1){grid-area: li1;}
+        #listaDesktop>li:nth-child(2){grid-area: li2; }
+        #listaDesktop>li:nth-child(3){grid-area: li3;}
+        #listaDesktop>li:nth-child(4){grid-area: li4;}
+        .paginaActual, #listaDesktop>li a:active{
+            color: #F4C643;
+            border-left: none;
+            border-bottom:4px solid rgb(206, 161, 37);
+        }
+        #listaDesktop>li a{
+            padding-bottom: 10%;
+            font-family: 'Whitney';
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #listaDesktop>li a:hover{
+            color: #F4C643;
+        }
+
+        
+
+        .parrafoInicio{ width:75%;}
+        .boton{ font-size: 21px; padding: 13px 50px 13px 0px;}
+
+        #certificados {width: 100%;}
+        .certificados article img{
+            width: 180px;
+            height: auto;
+        }
+
+
+        .flechader{top: 41%;left: 93%;}
+        .flechaizq{top: 41%; left: 0%;}
+        .trabajador{width: 27%;
+        margin: 0% 2%}
+        
+        .noticiasRelevantes h2{margin-top: 2%;}
+        .categoriasNovedades h2{ margin-top: 8%; margin-bottom: 3%;}
+        
+        .formulario form{width: 65%;}
+        .formulario h2{ margin-bottom: 2%;}
+        .formulario form p{margin: 5% 0%}
+
+        .accordion{
+            font-size: 1.0em;
+        }
+        footer{
+           padding-top: 17%;
+           grid-template-columns: auto 45% 45% auto ;
+           grid-gap: 7% 0%;
+           background: url(images/logo_chabtic_blanco.png) center 5%/ 20% no-repeat black;
+       }
+
+       
+       .instagram{background: url(images/instagram_logo.png) 90% center/ 18% no-repeat ;}
+       .facebook{background: url(images/facebook_logo.png) 10% center/ 18% no-repeat ;}
+       
+       
+}
+
+@media screen and (min-width: 1024px){
+    body{font-size: 1.7em;}
+    .barraMenu{background: url(images/logo_chabtic_blanco.png) 2% center/90px no-repeat black;}
+    .menu{grid-template-columns: 32% auto;}
+    .menuDesktop{font-size: 22px;}
+    h1{ background: url(images/logo_chabtic_negro.png) center center /20% no-repeat;}
+    .parrafoInicio{width:70%}
+    .boton a {font-size: 1em;}
+    #products{width:100%}
+
+    #Historia {
+        background: url(images/linea.png) center 48%/ 82% no-repeat;
+    }
+    .flechader{top: 42%;left: 89%;}
+    .flechaizq{top: 42%; left: 9%;}
+  
+    .boton{width: 180px; font-size: 23px;  padding: 16px 50px 16px 0px;}
+        footer{
+            padding-top: 5%;
+            padding-bottom: 14%;
+            padding-left: 5%;
+           grid-template-columns: 70% 15% 15%;
+           grid-template-rows: 45% auto auto;
+           grid-template-areas: ". insta face"
+           "datosContacto . ."
+           "copyright . ."
+           "address address adress";
+           grid-gap: 7% 0%;
+           justify-items: start;
+           align-items: center;
+           text-align: left;
+            background: url(images/logo_chabtic_blanco.png) 5% 5%/ 180px no-repeat black;
+            color: white;
+            text-align: start;
+        }
+
+        .instagram{background: url(images/instagram_logo.png) 50% center/ 46% no-repeat ;}
+        .facebook{background: url(images/facebook_logo.png) 10% center/ 46% no-repeat ;}
+        
+
+      
+}
+
+
