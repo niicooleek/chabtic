@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <link href="estilostimeline.css" rel="stylesheet" />
+</head>
+
+<body>
+<div  id="slidertimeline" class="slider-timeline">
+ <nav id="wrappertimeline" class="slider-nav-wrapper">
+      <div id="slider-nav-item" class="slider-nav-item active" onclick="goToSlide(0)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(1)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(2)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(3)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(4)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(5)"></div>
+ </nav>
+</div>
+
+  <div id="slidercards" class="slidercards">
+    <div id="wrappercards" class="wrappercards">
+      <div class="slide-timeline">
+      1</div>
+      <div class="slide-timeline">
+      2</div>
+      <div class="slide-timeline">
+      3</div>
+      <div class="slide-timeline">
+      4</div>
+      <div class="slide-timeline">
+      5</div>
+      <div class="slide-timeline">
+      6</div>
+    </div>
+</div>
+    <div class="slider-controls">
+      <div class="slider-control" id="leftArrow" onclick="prevSlide()">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="slider-control" id="rightArrow" onclick="nextSlide()">
+        <i class="fas fa-angle-right" ></i>
+      </div>
+    </div>
+   
+  
+  <script src="scripttimeline.js"></script>
+</body>
+
+</html>

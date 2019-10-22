@@ -1,0 +1,82 @@
+.slider-timeline {
+  width: 210px;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.slider-nav-wrapper {
+    border: 2px solid black;
+   display: flex;
+padding-left: 70px;
+  width: 420px;
+  height: 100%;
+  flex-wrap: nowrap;
+  transition: margin 0.5s ease-in-out;
+}
+
+.slider-nav-item {
+    
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 10px;
+  border-radius: 50%;
+  background-color: none;
+  border: 10px solid black;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider-nav-item.active {
+  opacity: 1;
+  background-color: black;
+}
+
+.slider-controls {
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.slider-control {
+  cursor: pointer;
+  color: black;
+  opacity: 0.5;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.slidercards{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  position: relative;
+  background-color: #ededed;
+}
+
+.wrappercards{
+    border: 3px solid red;
+    display: flex;
+  width: 600px;
+  height: 100px;
+  flex-wrap: nowrap;
+  transition: margin 0.5s ease-in-out;
+}
+
+.slide-timeline{
+    border: 3px solid blue;
+    width: 100px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}

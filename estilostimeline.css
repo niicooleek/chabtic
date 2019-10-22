@@ -1,0 +1,106 @@
+#Historia{
+  position: relative;
+}
+
+.slider-timeline {
+  width: 189px;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.slider-nav-wrapper {
+   display: flex;
+padding-left: 70px;
+  width: 420px;
+  height: 100%;
+  flex-wrap: nowrap;
+  transition: margin 0.5s ease-in-out;
+}
+
+.slider-nav-item {
+    
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 10px;
+  border-radius: 50%;
+  background-color: none;
+  border: 5px solid #cea125;
+  text-align: center;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-nav-item p{
+  font-size: 1.5em;
+  color: white;
+  font-weight: 700;
+}
+
+.slider-nav-item.active {
+  opacity: 1;
+  background-color: #cea125;
+}
+
+.slider-controls {
+  width: 300px;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.slider-control {
+  cursor: pointer;
+  color: black;
+  opacity: 0.5;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.slidercards{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+  position: relative;
+  background-color: #ededed;
+}
+
+.wrappercards{
+    display: flex;
+  width: 1800px;
+  height: 250px;
+  flex-wrap: nowrap;
+  transition: margin 0.5s ease-in-out;
+}
+
+.slide-timeline{
+    width: 300px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 420px){
+    .slider-controls{ 
+    top: 24%;
+    left: 14%;
+     }
+}
+
+@media screen and (min-width: 520px){
+  .slider-controls{
+    top: 26%;
+    left: 110px;
+    }
+}

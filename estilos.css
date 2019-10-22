@@ -49,7 +49,7 @@ body{font-family: "PT Sans"; font-size: 62.5%; background: url(images/textura_fo
 #inicio{  
     width: 100%;
     height: 100vh;
-    border: 1px solid black;
+   background: url(images/gifinicio.gif) center center /auto no-repeat;
 
 }
 
@@ -86,12 +86,14 @@ h1{
     text-indent: -99999.999px;
     z-index: 99;
     background: url(images/logo_chabtic_negro.png) center center /40% no-repeat;   
+
 }
 
 .barraMenu{
     overflow: hidden;
     width: 100%;
     padding: 3% 0%;
+    transition: all 0.7s ease-in;
     background: url(images/logo_chabtic_blanco.png) 2% center/77px no-repeat black;
 }
 
@@ -292,38 +294,59 @@ strong{
 
 
 #Historia{
-    width: 83%; margin: auto; position: relative;text-align: center; background: url(images/linea.png) center 36%/ 100% no-repeat;
+    width: 100%; margin: auto; position: relative;text-align: center;
 }
 #Historia>h2{font-size: 1.7em;}
+
 
 .flechaizq{position: absolute;top: 27%;
     left: -1%;}
 .flechader{position: absolute; top: 27%; left: 85%;}
-#swiper>p{
-    margin-top: 14%;
-    font-size: 1.4em;
-    font-weight: 700;
-
-
+.sucesoTimeline{
+    width: 90%;
+    height: 90%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "ano" "h3" "desc";
 }
-#swiper article h3{
+
+.sucesoTimeline h3{
     text-transform: uppercase;
+    font-size: 1.5em;
     margin-bottom: 1%;
+    grid-area: h3;
 }
-#swiper article p{
-    width: 80%;
-    margin: auto;
-}
+ 
 
 
-.significadoChabtic{margin: auto; padding: 8%; text-align:center; background: url(images/fondo_significado_chabtic.jpg) 0% 0%/ 100% no-repeat rgba(137, 107, 79, 0.616);}
-.significadoChabtic h2{color: white;}
-.significadoChabtic p{color: white; font-style: italic;}
+.anoTimeline{grid-area: ano; margin-top: 0%; font-size: 1.8em; font-weight: 700; color: #79614a}
+.descTimeline{grid-area: desc; font-size: 1.1em;}
+
+
+
+.significadoChabtic{margin: auto; padding: 21%; text-align:center;
+ background-image: url("images/fondo_significado_chabtic.jpg");
+
+
+  /* Set a specific height */
+height: 200px;
+width: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.significadoChabtic h2{color: white; vertical-align: center;}
+.significadoChabtic p{color: white; font-style: italic; vertical-align: center;}
 
  #Colaboradores h3{display:none;}
 #Colaboradores figure img{ width: 90%;}
 
-#FamiliaChabtic{width: 80%; font-size: .8em;}
+#FamiliaChabtic{width: 80%; margin-top: 0%; font-size: .8em;}
 .trabajadores{
     display: flex;
     flex-flow: row wrap; 
@@ -476,9 +499,10 @@ strong{
     position: absolute;
     padding: 1%;
     padding-left: 2%;
-    top:90%;
+    top:75%;
     background: #896B4F;
     font-size: 1em;
+    box-shadow: 0px -9px 21px 0px rgba(0,0,0,0.58);
 }
 
 .noticiaRelevante h3{
@@ -666,7 +690,8 @@ footer p{
 @media screen and (min-width: 520px){
 .boton{ width: 170px;}
 /*_HISTORIA_*/
-#Historia{background: url(images/linea.png) center 48%/ 100% no-repeat;}
+#Historia{}
+
 .flechader{top: 38%;left: 89%;}
 .flechaizq{top: 38%; left: 0%;}
 #swiper>p{padding-top: 5%;}

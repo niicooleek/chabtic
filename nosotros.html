@@ -10,6 +10,7 @@
     <title>Chabtic: Nosotros</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
     <link href="estilos.css" rel="stylesheet">
+    <link href="estilostimeline.css" rel="stylesheet">
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
@@ -65,16 +66,78 @@
 
         <section id="Historia" class="parrafoInicio">
             <h2>Historia</h2>
-            <div id="swiper">
-                <img class="flechaizq" src="images/flecha_izquierda.png">
-                <img class="flechader" src="images/flecha_derecha.png">
-                <p>2016</p>
-                <article>
-                <h3>La plaga</h3>
-                <p>Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
-                </article>   
-            </div>
+            <div class="slider-controls">
+      <div class="slider-control" id="leftArrow" onclick="prevSlide()">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="slider-control" id="rightArrow" onclick="nextSlide()">
+        <i class="fas fa-angle-right" ></i>
+      </div>
+    </div>
             
+            <div  id="slidertimeline" class="slider-timeline">
+                <nav id="wrappertimeline" class="slider-nav-wrapper">
+                    <div id="slider-nav-item" class="slider-nav-item active" onclick="goToSlide(0)"><p>1</p></div>
+                    <div class="slider-nav-item" onclick="goToSlide(1)"><p>2</p></div>
+                    <div class="slider-nav-item" onclick="goToSlide(2)"><p>3</p></div>
+                    <div class="slider-nav-item" onclick="goToSlide(3)"><p>4</p></div>
+                    <div class="slider-nav-item" onclick="goToSlide(4)"><p>5</p></div>
+                    <div class="slider-nav-item" onclick="goToSlide(5)"><p>6</p></div>
+                </nav>
+            </div>
+            <div id="slidercards" class="slidercards">
+                <div id="wrappercards" class="wrappercards">
+                    <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>Ts’umbal Xitalha’</h3>
+                            <p class="anoTimeline"> 2001</p>
+                            <p class="descTimeline">Nace la cooperativa <strong>Ts’umbal
+Xitalha’</strong> con <strong>22 familias</strong>
+productoras de café y miel con
+el objetivo de organizar el
+trabajo y construir un mejor
+ingreso económico para los
+productores.</p>
+                            </article> 
+                    </div>
+                      <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>La plaga</h3>
+                            <p class="anoTimeline"> 2016</p>
+                            <p class="descTimeline">Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
+                            </article> 
+                    </div>
+                      <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>La plaga</h3>
+                            <p class="anoTimeline"> 2016</p>
+                            <p class="descTimeline">Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
+                            </article> 
+                    </div>
+                      <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>La plaga</h3>
+                            <p class="anoTimeline"> 2016</p>
+                            <p class="descTimeline">Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
+                            </article> 
+                    </div>
+                      <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>La plaga</h3>
+                            <p class="anoTimeline"> 2016</p>
+                            <p class="descTimeline">Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
+                            </article> 
+                    </div>
+                      <div class="slide-timeline">                    
+                            <article class="sucesoTimeline"> 
+                            <h3>La plaga</h3>
+                            <p class="anoTimeline"> 2016</p>
+                            <p class="descTimeline">Llega <strong>la Plaga de la Roya</strong> a los cafetales y acaba con el 90% de la producción de café de la cooperativa</p>
+                            </article> 
+                    </div>
+                </div>
+            </div>                   
+    
            
         </section>
         
@@ -187,6 +250,7 @@
             <address>Sitio desarrollado por: Nicole Kleiman, Karlie Islas y Salma Kalife</address>
         </footer>
         <script src="js/scripts_eli.js"> </script>
+        <script src="js/scripttimeline.js"></script>
         <script src="js/script.js"></script>
     </body>
     </html>

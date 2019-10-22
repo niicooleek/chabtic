@@ -9,6 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Chabtic: Novedades</title>
     <link href="estilos.css" rel="stylesheet">
+    <link href="estilosnovedades.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
@@ -58,13 +60,52 @@
 
             <section class="noticiasRelevantes">
                 <h2>Noticias Relevantes</h2>
-                <figure>
-                    <img src="images/noticia1_chabtic.png" alt="Noticia 1">
-                </figure>
-                <div class="noticiaRelevante">
-                    <h3>Noticia 1</h3>
-                    <p> Nuestro nuevo sitio web</p>
+                <div id="slider" class="slider">
+                    <div id="wrapper" class="slider-slides-wrapper">
+                        <div class="slider-slide">
+                            <figure>
+                                <img src="images/noticia1_chabtic.png" alt="Noticia 1">
+                            </figure>
+                            <div class="noticiaRelevante">
+                                <h3>Noticia 1</h3>
+                            <p> Nuestro nuevo sitio web</p>
+                        </div>
+                    </div>
+                        <div class="slider-slide">
+                            <figure>
+                                <img src="images/noticia1_chabtic.png" alt="Noticia 1">
+                            </figure>
+                            <div class="noticiaRelevante">
+                                <h3>Noticia 2</h3>
+                                 <p> Nuestro nuevo sitio web</p>
+                            </div>
+                        </div>
+                        <div class="slider-slide">
+                            <figure>
+                                <img src="images/noticia1_chabtic.png" alt="Noticia 1">
+                            </figure>
+                            <div class="noticiaRelevante">
+                                <h3>Noticia 3</h3>
+                                <p> Nuestro nuevo sitio web</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                         <div class="slider-control" id="leftArrow" onclick="prevSlide()">
+                             <i class="fas fa-angle-left"></i>
+                        </div>
+                         <div class="slider-control" id="rightArrow" onclick="nextSlide()">
+                             <i class="fas fa-angle-right" ></i>
+                        </div>
+                    </div>
+    
                 </div>
+
+            <nav class="slider-nav">
+      <div class="slider-nav-item active" onclick="goToSlide(0)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(1)"></div>
+      <div class="slider-nav-item" onclick="goToSlide(2)"></div>
+    </nav>
             </section>
 
             <section class="categoriasNovedades">
@@ -106,6 +147,6 @@
                 <p class="copyright">Copyrigth</p>
                 <address>Sitio desarrollado por: Nicole Kleiman, Karlie Islas y Salma Kalife</address>
             </footer>
-            <script src="js/xscript.js"></script>
+            <script src="js/scriptnovedades.js"></script>
         </body>
         </html>

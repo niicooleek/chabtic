@@ -43,12 +43,7 @@ function abrirMenu(){
  }
 }
 
-var swiper = new Swiper('.swiper-container', {
-  pagination: '.swiper-pagination',
-  slidesPerView: 'auto',
-  paginationClickable: true,
-  spaceBetween: 0
-});
+
 
 /*$("#inicio > div:gt(0)").hide();
 setInterval(function() { 
