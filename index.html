@@ -41,7 +41,7 @@
                                     d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
                              </svg>
                     <div id="menuHamburguesa" class="inactive">
-                        <ul>
+                        <ul class="menudedatos">
                             <li><a href="nosotros.html" target="_self">Nosotros</a></li>
                             <li><a href="productos.html" target="_self">Productos</a></li>
                             <li><a href="novedades.html" target="_self">Novedades</a></li>
@@ -61,23 +61,23 @@
     </header>
 
     
-        <section class="parrafoInicio">
+        <section id="queEsChabtic" class="parrafoInicio">
             <h2>¿Qué es Chabtic?</h2>
             <p><strong>Chabtic</strong> es una empresa productora y comercializadora de miel de abeja, orgánica certificada. Producto del trabajo de la cooperativa <strong>Ts’umbal Xitalha’</strong>, conformada por <strong>familias tseltales</strong> apicultoras en la Selva Norte de Chiapas, México.</p>
-            <p class="boton"><a href="#" target="_self">Leer más</a></p>
+            <a href="#" target="_self"><p class="boton">Leer más</p></a>
         </section>
 
-        <section class="parrafoInicio">
+        <section id="familiaInicioChabtic" class="parrafoInicio">
             <h2>Familia Chabtic</h2>
             <figure class="mapa">
                 <img src="images/mapa_chiapas_chabtic.gif" alt="Mapa chiapas de ubicación de Chabtic">
             </figure>
             <p><strong>Nuestra miel</strong> es cultivada entre la diversidad de la flora local y en armonía con la <strong>Madre Tierra</strong>, lo que brinda un color, textura y sabor exquisito.</p>
-            <p class="boton"><a href="#" target="_self">Leer más</a></p>
+            <a href="#" target="_self" class="botona"><p class="boton">Leer más</p></a>
         </section>
         
-        <section class="parrafoInicio" id="products">
-            <h2>Los más vendidos</h2>
+        <section class="parrafoInicio" id="productoInicio">
+            <h2 id="tituloProductos">Los más vendidos</h2>
             <div class="container">
                     <div class="row">
                         <div class="col-xs-11 col-md-10 col-centered">
@@ -87,39 +87,45 @@
                                     <div class="item active">
                                         <div class="carousel-col">
                                             <div class="block img-responsive">
+                                               <a href="#">
                                                 <div class="producto"> 
                                                  <figure>
                                                      <img src="images/miel_chabtic.png" alt="miel orgánica de Chabtic">
                                                  </figure>
-                                                 <h3>Miel Orgánica 1</h3>
-                                                 <p>300g</p>
+                                                 <h3>Miel Orgánica</h3>
+                                                 <p>600g</p>
                                                 </div>
+                                               </a>  
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="carousel-col">
                                             <div class="block img-responsive">
+                                            <a href="#">
                                                 <div class="producto"> 
                                                  <figure>
                                                      <img src="images/miel_chabtic.png" alt="miel orgánica de Chabtic">
                                                  </figure>
-                                                 <h3>Miel Orgánica 2</h3>
-                                                 <p>300g</p>
+                                                 <h3>Miel Orgánica</h3>
+                                                 <p>400g</p>
                                                  </div>
+                                            </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="carousel-col">
                                             <div class="block img-responsive">
+                                                <a href="#" class="referenciaProducto">
                                                     <div class="producto"> 
                                                     <figure>
                                                          <img src="images/miel_chabtic.png" alt="miel orgánica de Chabtic">
                                                      </figure>
-                                                     <h3>Miel Orgánica 3</h3>
-                                                     <p>300g</p>
+                                                     <h3>Miel Orgánica</h3>
+                                                     <p>250g</p>
                                                      </div>
+                                                 </a>
                                             </div>
                                         </div>
                                     </div>
@@ -150,7 +156,7 @@
         </section>
 
 
-        <section id="certificados" class="parrafoInicio">
+        <section id="certificados" class="certificaciones1">
             <h2>Certificaciones</h2>
             <div class="certificados">
                 <article>
@@ -185,7 +191,7 @@
         </section>
            
        
-    <footer>
+    <footer id="footerid">
             <p class="instagram">  
                 <a href="#" target="_blank">instagram</a>
             </p>

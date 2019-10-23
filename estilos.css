@@ -60,23 +60,7 @@ body{font-family: "PT Sans"; font-size: 62.5%; background: url(images/textura_fo
   height: 100%;
 }
 
-#puntos{display:none;}
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+
   
 h1{
     width: 100%;
@@ -85,7 +69,7 @@ h1{
     position: absolute;
     text-indent: -99999.999px;
     z-index: 99;
-    background: url(images/logo_chabtic_negro.png) center center /40% no-repeat;   
+    background: url(images/chabtic_negro.png) center center /40% no-repeat;   
 
 }
 
@@ -117,6 +101,10 @@ h1{
     grid-template-rows: auto;
     grid-gap: 1px;
     grid-template-areas: ". ham";
+}
+
+.menudedatos{
+    font-size: 1.8em;
 }
 
 .logochabtic>h2{display: none;}
@@ -187,6 +175,10 @@ h1{
 
 /*PARRAFO__________________________*/
 
+#queEsChabtic, #familiaInicioChabtic, #productoInicio{
+    font-size: 1.2em;}
+#productoInicio{width: 95%;}
+
 .parrafoInicio{
     width: 75%;
     margin: auto;
@@ -224,10 +216,11 @@ strong{
     margin: auto;
     padding: 11px 46px 10px 0px;
     font-family: 'Whitney';
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 900;
     text-transform: uppercase;
     border-radius: 10px;
+    color: white;
     background: url(images/logo_boton.png)100% 100%/40% no-repeat #F4C643;
 }
 
@@ -250,25 +243,52 @@ strong{
     align-content: center;
 }
 #products h2{width: 100%;}
+a:link{text-decoration:none;}
 .producto{
-  justify-content: center;
-  align-items: center;
-
+    color: black;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "nombrep" "cantidadp" "fotop";
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     text-align: center;
 }
+
+
+
 .producto h3{
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 700;
+    grid-area: nombrep;
     
 }
-.producto p{font-size: 1.1em;}
-.producto figure{ width: 100%;}
+.producto p{width: 70%; margin: auto; font-size: 1.1em; border-bottom: 2px solid black;grid-area: cantidadp;}
+.producto figure{ width: 100%; grid-area: fotop}
 .producto figure img{width: 100%}
 
 .mapa>img{ width: 100%;}
 
+.certificaciones1{
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 10%;
+    text-align: center;
+}
 
+.certificaciones1 h2{
+    margin: 1%;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #69A05F;
+    font-family: 'Whitney';
+}
 /*CERTIFICADOS*/
 .certificados{
     display:flex;
@@ -276,15 +296,19 @@ strong{
     justify-content:center; 
     align-content: center;
 }
+
+.tituloCertificaciones{
+    font-size:2.6em;
+}
 .certificados article{
  width: 180px;
  margin: 1%;
+ align-self: center;
 }
 .certificados article h3{display: none;}
-.certificados figure{width: 100%;}
+.certificados figure{width: 67%; align-items: center; margin: auto;}
 .certificados article img{
-    width: 150px;
-    height: auto;
+    max-width: 100%;
 }
 
 /*___________________________NOSOTROS__________________________*/
@@ -449,18 +473,40 @@ width: 100%;
 #products{margin-bottom: 10%;}
 
 .productosgenerales{width: 200px;
-    margin: 0% 3%; 
+    margin: 1% 2%; 
+    padding: 1%;
+    display: grid;
+    color: black;
+    text-decoration: none;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "h3titulo" "cantidad" "producto";
     justify-content: center;
     align-items: center;
-    text-align: center;}
+    text-align: center;
+    border-radius: 10%;}
+
+.productosgenerales:hover{
+    opacity: .5;
+    background-color: white;
+    border: 4px solid #f4c643
+}
+
 .productosgenerales h3{
+    grid-area: h3titulo;
     font-size: 1.1em;
     text-transform: uppercase;
     font-weight: 700;
     
 }
-.productosgenerales p{font-size: 1.1em;}
-.productosgenerales figure{width: 100%;}
+.productosgenerales p{
+    width: 70%;
+    margin: auto;
+    grid-area: cantidad;
+    border-bottom: 2px solid black;
+    font-size: 1.1em;
+}
+.productosgenerales figure{grid-area: producto; width: 100%;}
 .productosgenerales img{width: 100%;}
 #procedimientoMiel figure{width:68%; margin: auto;}
 #procedimientoMiel img{width:100%}
@@ -553,6 +599,154 @@ width: 100%;
     background: #79614a8a;
 
 }
+/*_______________________NOTICIA CATEGORIA_____________*/
+.notaside h2{
+    margin: 1%;
+    text-align: center;
+    font-size: 1.3em;
+    color: #69A05F;
+}
+#noticiasrec h3{
+    font-size: 1.1em;
+    margin-left: 5%;
+}
+
+.recientes{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "notrec1"
+    "notrec2"
+    "notrec3";
+
+}
+
+.notarticulo1{grid-area: notrec1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "notrecfoto1"
+    "notrectitulo1"
+    "notrecdes1"
+    "notrecfecha1"
+    "notrecvermas1";
+}
+
+.noticia1{grid-area: notrecfoto1;
+    margin: 0; 
+}
+
+.notarticulo1 p:nth-child(2){
+    grid-area: notrectitulo1;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo1 p:nth-child(3){
+    grid-area: notrecdes1;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo1 p:nth-child(4){
+    grid-area: notrecfecha1;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo1 p:last-child{
+    grid-area: notrecvermas1;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.notarticulo2{grid-area: notrec2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "notrecfoto2"
+    "notrectitulo2"
+    "notrecdes2"
+    "notrecfecha2"
+    "notrecvermas2";
+}
+
+.noticia2{grid-area: notrecfoto2;
+    margin: 0; 
+}
+
+.notarticulo2 p:nth-child(2){
+    grid-area: notrectitulo2;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo2 p:nth-child(3){
+    grid-area: notrecdes2;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo2 p:nth-child(4){
+    grid-area: notrecfecha2;
+    text-align: center;
+    margin: 0;
+}
+
+.notarticulo2 p:last-child{
+    grid-area: notrecvermas2;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* ------------------- FIN NOTICIAS ------------------ */
+
+/* ------------------- INICIO NOTICIA DESPLEGADA ------------------ */
+
+#ndesplegada{
+    position: relative;
+}
+
+#ndesplegada>div{
+    position: absolute;
+    top: 45%;
+    background-color: white;
+    margin: 5%;
+}
+
+#ndesplegada figure{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+#ndesplegada h2{
+    margin: 1%;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+#ndesplegada p:nth-child(2){
+    text-align: center;
+}
+#ndesplegada p:nth-child(3), #ndesplegada p:nth-child(4),#ndesplegada p:nth-child(5), #ndesplegada p:last-child{
+    text-align: justify;
+    margin: 10px;
+}
+
+#noticiades footer{
+    margin-top: 260%;
+}
+
+/* ------------------- FIN NOTICIA DESPLEGADA ------------------ */
+
 /*____________________CONTACTO_____________*/
 /*FORMULARIO*/
 .formulario>h2{ width: 90%; 
@@ -622,12 +816,17 @@ input[type="submit"]:hover{background-color:rgb(206, 161, 37); }
 
 
 /*FOOTER____________________________*/
+#footerid{
+    font-size: 1.7em;
+}
+
+
 
 footer{
     margin-top: 5%;
     padding-top: 38%;
     padding-bottom: 30%;
-    font-size: 1.3em;
+    font-size: .9em;
     display: grid;
     grid-template-columns: auto 40% 40% auto ;
     grid-template-rows: auto auto auto auto;

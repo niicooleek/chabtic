@@ -27,7 +27,6 @@
 .carousel-col { 
     position: relative; 
     min-height: 1px; 
-    padding: 5px; 
     float: left;
  }
 
@@ -35,6 +34,8 @@
  .active > div:first-child { display:block; }
 
 /*xs*/
+
+
 @media (max-width: 767px) {
   .carousel-inner .active.left { left: -50%; }
   .carousel-inner .active.right { left: 50%; }
